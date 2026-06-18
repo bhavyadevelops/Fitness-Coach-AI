@@ -22,6 +22,7 @@ This project was developed as a prototype/MVP demonstrating how Large Language M
 - Categorized exercise database
 - Difficulty indicators
 - Muscle-group filtering
+- Each exercise haas video embedding in a modal
 
 ### Settings Panel
 - User customization interface

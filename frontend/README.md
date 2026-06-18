@@ -1,111 +1,105 @@
-# Titan AI Backend
+# Titan AI Frontend
 
-Backend API for Titan AI Fitness Coach.
+Frontend interface for Titan AI Fitness Coach.
 
-The backend acts as a bridge between the frontend interface and the locally running Mistral Large Language Model through Ollama.
-
----
-
-## Tech Stack
-
-- Python
-- Flask
-- Flask-CORS
-- Requests
-- Ollama
-- Mistral
+Built using HTML, CSS, and JavaScript.
 
 ---
 
-## Requirements
+## Features
 
-Install dependencies:
+### AI Coach
+Interactive chat interface connected to the backend API.
 
-```bash
-pip install -r requirements.txt
-```
+### Nutrition Dashboard
+Displays:
+- Calorie intake
+- Macronutrient tracking
+- Meal distribution
+
+### Exercise Library
+Includes:
+- Exercise categories
+- Difficulty levels
+- Search interface
+
+### Settings
+Contains:
+- Display settings
+- AI preferences
+- System controls
 
 ---
 
-## Start Ollama
+## Technologies
 
-Make sure Ollama is installed and Mistral is downloaded:
-
-```bash
-ollama pull mistral
-```
-
-Run Ollama:
-
-```bash
-ollama run mistral
-```
+- HTML5
+- CSS3
+- Vanilla JavaScript
 
 ---
 
-## Run Backend
+## Pages
 
-```bash
-python app.py
-```
+### ai-coach.html
+Main AI chat interface.
 
-Server starts on:
+### nutrition.html
+Nutrition tracking dashboard.
+
+### library.html
+Exercise knowledge base.
+
+### settings.html
+Application settings panel.
+
+---
+
+## Running the Frontend
+
+Open the HTML files directly in a browser.
+
+Recommended:
 
 ```text
-http://127.0.0.1:5000
+ai-coach.html
 ```
 
+Ensure the Flask backend is running before using the AI Coach feature.
+
 ---
 
-## API Endpoint
+## Backend Connection
 
-### POST /chat
+The frontend communicates with:
 
-Request:
-
-```json
-{
-  "message": "Create a chest workout"
-}
+```text
+http://127.0.0.1:5000/chat
 ```
 
-Response:
-
-```json
-{
-  "reply": "Here's a chest workout..."
-}
-```
+via JavaScript Fetch API.
 
 ---
 
-## Architecture
+## Design Philosophy
 
-Frontend
-↓
-Flask API
-↓
-Ollama
-↓
-Mistral LLM
+Titan AI follows a dark-themed, performance-focused UI inspired by professional fitness applications.
 
----
+Key design goals:
 
-## Current Limitations
-
-- No authentication
-- No database
-- No conversation memory
-- Local deployment only
-- Single-model support
+- Clean interface
+- High readability
+- Fast navigation
+- Minimal distractions
+- Fitness-focused experience
 
 ---
 
-## Future Improvements
+## Future Enhancements
 
-- User profiles
-- Conversation history
-- Personalized coaching
-- Workout generation engine
-- Nutrition recommendation engine
-- Cloud deployment
+- Responsive mobile layout
+- User authentication
+- Workout generator page
+- Progress analytics dashboard
+- Voice interaction
+- Real-time data persistence
